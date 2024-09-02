@@ -1,6 +1,8 @@
 from django.shortcuts import render,HttpResponse
 
 def home(request):
-    return render(request,'home.html')
+    name=['jabed','omor','bappi']
+    context={'name':name}
+    return render(request,'home.html',context)
 
 
