@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>This is Home page</h1>
-    {{ name }}
-    <div>
-        list pass by h3 and b tag
-        <h3><b>{{name}}</b></h3>
-    </div>
+{% extends 'basic.html' %}
 
-    <div>
-        {% for i in name %}
+
+{% block body %}
+<h1>This is home page</h1>
+{% for i in name %}
     {{ i }}<br>
 {% endfor %}
 
-
-    </div>
-</body>
-</html>
+{% endblock body %}
+    
