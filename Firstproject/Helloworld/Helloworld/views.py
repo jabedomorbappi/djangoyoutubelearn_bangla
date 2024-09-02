@@ -12,7 +12,7 @@ def contact(request):
     if request.method=="POST":
         name=request.POST['name']
         phone=request.POST['phone']
-        content=request.POST['contact']
+        content=request.POST['content']
         print(name)
         print(phone)
         print(content)
