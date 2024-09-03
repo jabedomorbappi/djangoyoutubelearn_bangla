@@ -8,24 +8,8 @@
     <div class="container">
         <form method="POST">
             {% csrf_token %}
+            {{ form }}
 
-            {% comment %} This is for Name  {% endcomment %}
-            <div class="form-group">
-              <label for="exampleInputEmail1" class="form-label">Name</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="your name " name="name">
-              
-            </div>
-            {% comment %} this is for phone  {% endcomment %}
-
-            <div class="form-group">
-                <label for="exampleInputEmail1" class="form-label">Phone</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="your phone " name="phone">
-                
-              </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Details</label>
-              <input type="Textarea" class="form-control" id="exampleInputPassword1" name='content'>
-            </div>
             
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>

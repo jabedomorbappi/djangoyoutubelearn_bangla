@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse
 
+
 def home(request):
     if request.method=="GET":
         
@@ -8,15 +9,15 @@ def home(request):
         return render(request,'home.html',context)
 
 
-def contact(request):
-    if request.method=="POST":
-        name=request.POST['name']
-        phone=request.POST['phone']
-        content=request.POST['content']
-        print(name)
-        print(phone)
-        print(content)
-    return render(request,'contact.html')    
+# def contact(request):
+#     if request.method=="POST":
+#         name=request.POST['name']
+#         phone=request.POST['phone']
+#         content=request.POST['content']
+        
+        
+        
+#     return render(request,'contact.html')    
         
         
     
