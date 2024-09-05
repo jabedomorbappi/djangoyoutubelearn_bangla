@@ -26,3 +26,11 @@ class ContactForm(forms.Form):
             'rows': 4,
         })
     )
+from .models import Contact    
+class ContactFormModel(forms.ModelForm):
+    
+    class Meta:
+        model = Contact
+        fields = '__all__'
+
+    

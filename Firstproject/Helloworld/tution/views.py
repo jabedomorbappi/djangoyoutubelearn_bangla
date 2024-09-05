@@ -1,23 +1,16 @@
 from django.shortcuts import render
 from .models import Contact
-from .forms import ContactForm
+from .forms import ContactForm,ContactFormModel
 
 # Create your views here.
 
 def contact(request):
     if request.method=="POST":
-        form=ContactForm(request.POST)
+        form=ContactFormModel(request.POST)
         if form.is_valid():
             
-            name=form.cleaned_data['name']
-            phone=form.cleaned_data['phone']
-            content=form.cleaned_data['content']
-            obj=Contact(name=name,phone=phone,content=content)
-            obj.save()
-            print(name)
-            print(phone)
-            print(content)
-            
+            form.save()
+
     else:
         form=ContactForm()
             

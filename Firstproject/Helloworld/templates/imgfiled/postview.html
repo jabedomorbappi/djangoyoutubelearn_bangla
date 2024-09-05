@@ -1,0 +1,16 @@
+{% extends 'basic.html' %}
+
+{% block body %}
+    <h1>Uploaded Images</h1>
+
+    {% for p in image_d %}
+        <div>
+            <h3>{{ p.name }}</h3>
+            {% comment %} <img src="{{ p.image.url }}" alt="{{ p.name }}" width="200" height="200">
+             {% endcomment %}
+             <img src="/media/{{ p.image }}" alt="{{ p.name }}" width="200" height="200">
+        </div>
+    {% endfor %}
+
+    <hr>
+{% endblock body %}

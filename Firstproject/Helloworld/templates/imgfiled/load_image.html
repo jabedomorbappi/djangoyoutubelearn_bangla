@@ -1,22 +1,16 @@
 {% extends 'basic.html' %}
 
-
 {% load crispy_forms_tags %}
 
-
 {% block body %}
-
-    <h1>contact please</h1>
+    <h1>Image Load</h1>
 
     <div class="container">
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">  <!-- enctype is necessary for file uploads -->
             {% csrf_token %}
-            {{ form |crispy}}
+            {{ form|crispy }}
 
-            
             <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+        </form>
     </div>
 {% endblock body %}
-
-    
