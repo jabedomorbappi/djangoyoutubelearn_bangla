@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'tution',
     'crispy_forms',
     'crispy_bootstrap5',
-    'imagefiled',
+   'imagefield',
     'multiselectfield',
     
     

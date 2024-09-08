@@ -9,7 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('tution/',include('tution.urls')),
     path('home/',home,name='home'),
-    path('imagefiled/',include('imagefiled.urls')),
+    path('imagefield/',include('imagefield.urls')),
     
     # path('contact/',contact,name='contact'),
     
