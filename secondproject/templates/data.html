@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container">
+
+    <form action="" method="POST">
+
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age" required>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">submit</button>
+
+    </form>
+</div>
+
+{% endblock body %}
+
+
+

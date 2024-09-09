@@ -4,7 +4,7 @@ from .models import Imagedescription
 class ImagedescriptionForm(forms.ModelForm):
     class Meta:
         model = Imagedescription
-        fields = ['name', 'title', 'image', 'available', 'details', 'MEDIUM']
+        fields = ['name', 'title', 'image', 'available', 'details', 'MEDIUM_CHOICE']
         
         widgets = {
             'available': forms.CheckboxInput(),

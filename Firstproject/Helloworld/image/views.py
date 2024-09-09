@@ -17,7 +17,7 @@ def createimagedescription(request):
 def success_page(request):
     images = Imagedescription.objects.all()  # Load images for success page  
     return render(request, 'success.html', {'images': images})          
-     
+    
     
     
     

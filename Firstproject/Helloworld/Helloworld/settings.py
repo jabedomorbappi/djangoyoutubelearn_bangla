@@ -30,11 +30,9 @@ INSTALLED_APPS = [
     'tution',
     'crispy_forms',
     'crispy_bootstrap5',
-   'imagefield',
+    # 'imagefield',  # Comment this out or remove it
     'multiselectfield',
-    
-    
-    
+    'image',
 ]
 
 MIDDLEWARE = [
