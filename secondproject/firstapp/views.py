@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .forms import DataForm
+from .models import Data
 
 # Create your views here.
 def firstApp(request):
@@ -19,3 +20,8 @@ def data(request):
 def success_view(request):
     return render(request, 'success.html')
             
+def postview(request):
+    data= Data.objects.all()
+    return render(request,'firstapp/data_view.html',{"data":data})
+ 
+               

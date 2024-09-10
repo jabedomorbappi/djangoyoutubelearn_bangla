@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+
+{% block body %}
+
+
+{% for i in data %}
+{{ i.name}}
+<img src="{{i.image.url}}" alt="i,name">
+<hr>
+
+{% endfor %}
+    
+{% endblock body %}
+
+
+
+    
