@@ -1,37 +1,42 @@
 {% extends "base.html" %}
-
 {% block body %}
 <div class="container">
-
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         
+        {{ form.non_field_errors }}
+
         <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+            {{ form.name.label }}
+            {{ form.name }}
+            {{ form.name.errors }}
         </div>
 
         <div class="form-group">
-            <label for="age">Age</label>
-            <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age" required>
+            {{ form.age.label }}
+            {{ form.age }}
+            {{ form.age.errors }}
         </div>
 
         <div class="form-group">
-            <label for="category">Category</label>
-            <select class="form-control" id="category" name="category" required>
-                <option value="Teacher">Teacher</option>
-                <option value="Student">Student</option>
-            </select>
+            {{ form.category.label }}
+            {{ form.category }}
+            {{ form.category.errors }}
         </div>
 
         <div class="form-group">
-            <label for="image">Profile Image</label>
-            <input type="file" class="form-control" id="image" name="image">
+            {{ form.medium.label }}
+            {{ form.medium }}
+            {{ form.medium.errors }}
+        </div>
+
+        <div class="form-group">
+            {{ form.image.label }}
+            {{ form.image }}
+            {{ form.image.errors }}
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
-
     </form>
-
 </div>
 {% endblock %}

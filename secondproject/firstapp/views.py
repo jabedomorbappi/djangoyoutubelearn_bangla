@@ -7,15 +7,15 @@ def firstApp(request):
     return render(request,'firstapp/home.html')
 
 def data(request):
-    if request.method=="POST":
-        form=DataForm(request.POST)
+    if request.method == "POST":
+        form = DataForm(request.POST, request.FILES)  # Handling POST and FILES data
         if form.is_valid():
-            form.save()
-            
-            return redirect('success') 
+            form.save()  # Save form data if valid
+            return redirect('success')  # Redirect to success page
     else:
-        form=DataForm()
-    return render(request,'data.html',{'form':form})
+        form = DataForm()  # Empty form on GET request
+
+    return render(request, 'data.html', {'form': form})
 
 def success_view(request):
     return render(request, 'success.html')
