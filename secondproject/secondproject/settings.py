@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'multiselectfield',
     'firstapp',
+    "onetoone",
 ]
 
 MIDDLEWARE = [
